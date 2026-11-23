@@ -1,117 +1,30 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ghorfa غرفة — Craft & Furniture</title>
-<meta name="description" content="Desks and tables made in Egypt. Choose your size by the centimetre.">
-<link rel="icon" href="images/logo.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#000;--bg:#fff;--stone:#f1f0ec;--oak:#b8804a;--mute:#5d5d5d;--line:#d9d7d0}
-*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
-body{font:400 16px/1.6 Montserrat,system-ui,sans-serif;color:var(--ink);background:var(--bg)}
-h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:500;line-height:1.1}
-a{color:inherit}:focus-visible{outline:3px solid var(--oak);outline-offset:2px}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;z-index:5;background:#fffffff2;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-header img{height:52px;mix-blend-mode:multiply}nav{display:flex;gap:22px;align-items:center;font-size:14px;font-weight:500}
-nav a{text-decoration:none}
-.btn{display:inline-block;background:var(--ink);color:#fff;padding:12px 20px;border:0;font:600 14px Montserrat;text-decoration:none;cursor:pointer;transition:background .2s}
-.btn:hover{background:var(--oak)}.btn.ghost{background:none;color:var(--ink);border:1.5px solid var(--ink)}.btn.ghost:hover{background:var(--ink);color:#fff}
-.hero{padding:48px 0 56px;display:grid;gap:32px;grid-template-columns:1fr;align-items:center}
-@media(min-width:860px){.hero{grid-template-columns:1fr 1.1fr;padding:72px 0}}
-.hero h1{font-size:clamp(40px,6vw,68px);letter-spacing:-.02em}.hero p{margin:18px 0 26px;color:var(--mute);max-width:44ch}
-.plan{background:var(--stone);padding:18px}.plan svg{width:100%;display:block}
-.plan .rect{fill:#fff;stroke:var(--ink);stroke-width:2;transition:all .6s cubic-bezier(.2,.8,.2,1)}
-.plan .dim{stroke:var(--oak);stroke-width:1.5;transition:all .6s cubic-bezier(.2,.8,.2,1)}
-.plan text{font:600 13px Montserrat;fill:var(--ink)}.plan .obj{fill:none;stroke:var(--mute);stroke-width:1.4}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
-.chip{border:1.5px solid var(--ink);background:#fff;padding:7px 14px;font:500 13px Montserrat;cursor:pointer}
-.chip[aria-pressed=true]{background:var(--ink);color:#fff}
-.cap{font-size:13px;color:var(--mute);margin-top:10px;min-height:20px}
-.trust{background:var(--stone);padding:28px 0}.trust .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
-.trust b{display:block;font-size:14px}.trust span{font-size:13px;color:var(--mute)}
-section{padding:64px 0}h2{font-size:clamp(30px,4vw,44px);margin-bottom:8px}.sub{color:var(--mute);margin-bottom:28px}
-.filters{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap}
-.grid{display:grid;gap:36px 28px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
-.card{display:flex;flex-direction:column;scroll-margin-top:90px}
-.main{aspect-ratio:4/3;background:var(--stone);overflow:hidden;cursor:zoom-in}.main img{width:100%;height:100%;object-fit:cover;display:block}
-.thumbs{display:flex;gap:6px;margin:6px 0 14px}.thumbs img{width:56px;height:42px;object-fit:cover;cursor:pointer;opacity:.55;border:2px solid transparent}
-.thumbs img.on{opacity:1;border-color:var(--ink)}
-.card h3{font-size:28px}.dims{font-weight:600;font-size:14px;margin:4px 0}.price{font-size:20px;font-weight:600;margin:6px 0 10px}
-.card p{font-size:14px;color:var(--mute)}.card ul{font-size:13px;color:var(--mute);margin:10px 0 14px;padding-left:18px}
-.fin{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}.fin .chip{padding:5px 11px;font-size:12px;border-color:var(--line)}.fin .chip[aria-pressed=true]{border-color:var(--ink)}
-.card .btn{margin-top:auto;text-align:center}
-.custom{background:var(--ink);color:#fff}.custom .sub{color:#bbb}
-.custom form{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));max-width:720px}
-.custom input{padding:12px;border:0;font:15px Montserrat;width:100%}.custom .btn{background:var(--oak)}.custom .btn:hover{background:#fff;color:#000}
-details{border-bottom:1px solid var(--line);padding:16px 0;max-width:720px}summary{font-weight:600;cursor:pointer}details p{color:var(--mute);margin-top:8px}
-footer{border-top:1px solid var(--line);padding:36px 0;font-size:14px}footer .wrap{display:flex;gap:24px;justify-content:space-between;align-items:center;flex-wrap:wrap}
-footer img{height:70px;mix-blend-mode:multiply}footer .soc{display:flex;gap:18px;font-weight:600}
-dialog{border:0;padding:0;max-width:94vw;background:none}dialog::backdrop{background:#000d}dialog img{max-width:94vw;max-height:90vh;display:block}
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
-</style></head><body>
-<header><div class="wrap"><a href="#top"><img src="images/logo.jpg" alt="Ghorfa غرفة — Craft & Furniture"></a>
-<nav><a href="#shop">Shop</a><a href="#custom">Custom size</a><a href="#faq">FAQ</a><a class="btn" id="waTop" href="#">WhatsApp</a></nav></div></header>
-<main id="top">
-<div class="wrap hero"><div><h1>Pick your desk by the centimetre.</h1>
-<p>Handcrafted desks and tables, made to order and delivered to your room. Choose a size and see how it sits on your floor plan.</p>
-<a class="btn" href="#shop">Shop desks</a></div>
-<div><div class="plan"><svg viewBox="0 0 440 290" role="img" aria-label="Top view of the selected desk with dimensions">
-<line class="dim" id="dTop" y1="34" y2="34"/><text id="tW" y="26" text-anchor="middle"></text>
-<line class="dim" id="dSide" y1="60"/><text id="tD" y="0"></text>
-<rect class="rect" id="desk" y="60" width="0" height="0"/>
-<rect class="obj" id="lap" width="66" height="45" rx="3"/><circle class="obj" id="mug" r="9"/>
-<text x="12" y="278" style="font-weight:500;fill:#5d5d5d">Top view, to scale. Laptop and mug for reference.</text></svg></div>
-<div class="chips" id="heroChips"></div><div class="cap" id="fits"></div></div></div>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ghorfa غرفة — Craft & Furniture</title><meta name="description" content="Desks and tables made in Egypt. Pick a shape, then your size.">
+<link rel="icon" href="images/logo.jpg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body>
+<main><div class="wrap hero"><div><h1>Pick your shape. Then your size.</h1>
+<p>Handcrafted desks and tables, made to order and delivered to your room. Choose a model and see how each size sits on your floor plan.</p><a class="btn" href="#shop">Shop the collection</a></div>
+<div><div class="plan"><svg id="plan" viewBox="0 0 440 290" role="img" aria-label="Top view of the selected model with dimensions"></svg></div>
+<div class="chips" id="mChips"></div><div class="chips" id="sChips"></div><div class="cap" id="cap"></div></div></div>
 <div class="trust"><div class="wrap" id="trust"></div></div>
-<section id="shop"><div class="wrap"><h2>The collection</h2><p class="sub">Choose a finish, then order directly on WhatsApp.</p>
-<div class="filters" id="filters"></div><div class="grid" id="grid"></div></div></section>
-<section class="custom" id="custom"><div class="wrap"><h2>Need a different size?</h2><p class="sub">Tell us the width and depth in cm. We'll reply with a quote.</p>
-<form id="cf"><input name="w" type="number" min="60" placeholder="Width (cm)" required aria-label="Width in cm"><input name="d" type="number" min="40" placeholder="Depth (cm)" required aria-label="Depth in cm"><input name="n" placeholder="Colour or notes" aria-label="Notes"><button class="btn">Request a quote</button></form></div></section>
+<section id="shop"><div class="wrap"><h2>The collection</h2><p class="sub">Open a model to pick its size and finish.</p><div class="filters" id="filters"></div><div class="grid" id="grid"></div></div></section>
+<section class="custom" id="custom"><div class="wrap"><h2>Need a different size?</h2><p class="sub">Tell us the width and depth in cm. We’ll reply with a quote.</p>
+<form id="cf"><input name="w" type="number" min="40" placeholder="Width (cm)" required aria-label="Width in cm"><input name="d" type="number" min="40" placeholder="Depth (cm)" required aria-label="Depth in cm"><input name="n" placeholder="Shape, colour or notes" aria-label="Notes"><button class="btn">Request a quote</button></form></div></section>
 <section id="faq"><div class="wrap"><h2>Good to know</h2><div id="faqList" style="margin-top:20px"></div></div></section></main>
-<footer><div class="wrap"><img src="images/logo.jpg" alt="Ghorfa"><div class="soc"><a id="ig" target="_blank" rel="noopener">Instagram</a><a id="fb" target="_blank" rel="noopener">Facebook</a><a id="wa2" target="_blank" rel="noopener">WhatsApp</a></div><span>© <span id="yr"></span> Ghorfa Craft & Furniture</span></div></footer>
-<dialog id="lb"><img alt=""></dialog>
-<script src="products.js"></script>
+<script src="products.js"></script><script src="app.js"></script>
 <script>
-const $=s=>document.querySelector(s),wa=m=>`https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(m)}`;
-const fmt=p=>p?p.toLocaleString('en-US')+' '+SITE.currency:'Ask for price';
-const ph=p=>{const k=.5,w=p.w*k,d=p.d*k;return 'data:image/svg+xml,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" fill="#f1f0ec"/><rect x="${200-w/2}" y="${130-d/2}" width="${w}" height="${d}" fill="#fff" stroke="#000" stroke-width="2"/><text x="200" y="250" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#5d5d5d">Photo coming soon: ${p.w}×${p.d} cm</text></svg>`)};
-const src=(p,i)=>'images/'+p.images[i];
-/* links + static bits */
-$('#ig').href=SITE.instagram;$('#fb').href=SITE.facebook;$('#wa2').href=$('#waTop').href=wa('Hello Ghorfa, I have a question.');$('#yr').textContent=new Date().getFullYear();
 $('#trust').innerHTML=SITE.trust.map(t=>`<div><b>${t[0]}</b><span>${t[1]}</span></div>`).join('');
 $('#faqList').innerHTML=SITE.faq.map(f=>`<details><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('');
-$('#cf').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);location.href=wa(`Hello Ghorfa, I'd like a quote for a custom desk: ${f.get('w')}×${f.get('d')} cm. ${f.get('n')}`)};
-/* hero plan */
-const K=1.9,desks=PRODUCTS.filter(p=>p.category==='Desks');let cur=0;
-function plan(i){cur=i;const p=desks[i],w=p.w*K,d=p.d*K,x=(440-w)/2,y=60,s=(a,o)=>Object.entries(o).forEach(([k,v])=>a.setAttribute(k,v));
- const r=$('#desk');r.style.cssText=`x:${x}px;width:${w}px;height:${d}px`;
- s($('#dTop'),{x1:x,x2:x+w});s($('#tW'),{x:220});$('#tW').textContent=p.w+' cm';
- s($('#dSide'),{x1:x-14,x2:x-14,y2:y+d});const t=$('#tD');t.textContent=p.d+' cm';s(t,{transform:`translate(${x-20} ${y+d/2}) rotate(-90)`,'text-anchor':'middle'});
- s($('#lap'),{x:x+w/2-33,y:y+d-58});s($('#mug'),{cx:x+w-26,cy:y+22});
- document.querySelectorAll('#heroChips .chip').forEach((c,j)=>c.setAttribute('aria-pressed',j===i));
- $('#fits').innerHTML=`${p.fits} <a href="#${p.id}">See this desk</a>`}
-$('#heroChips').innerHTML=desks.map((p,i)=>`<button class="chip" aria-pressed="false" data-i="${i}">${p.w}×${p.d}</button>`).join('');
-$('#heroChips').onclick=e=>{const b=e.target.closest('.chip');if(b)plan(+b.dataset.i)};
-if(desks.length){const r=$('#desk');r.style.cssText='x:220px;width:0;height:0';setTimeout(()=>plan(Math.min(1,desks.length-1)),150)}
-/* shop */
+$('#cf').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);location.href=wa(`Hello Ghorfa, I’d like a quote for a custom piece: ${f.get('w')}×${f.get('d')} cm. ${f.get('n')}`)};
+let mi=0,si=0;
+function hero(){const m=PRODUCTS[mi];si=Math.min(si,m.sizes.length-1);plan($('#plan'),m,m.sizes[si]);
+ $('#mChips').innerHTML=PRODUCTS.map((p,i)=>`<button class="chip" aria-pressed="${i===mi}" data-m="${i}">${p.name}</button>`).join('');
+ $('#sChips').innerHTML=m.sizes.map((s,i)=>`<button class="chip s" aria-pressed="${i===si}" data-s="${i}">${dim(m,s)}</button>`).join('');
+ $('#cap').innerHTML=`${m.sizes[si].fits} <a href="product.html?id=${m.id}&s=${si}">See this model</a>`}
+document.querySelector('.hero').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;if(b.dataset.m!=null){mi=+b.dataset.m;si=0}else si=+b.dataset.s;hero()};
 const cats=['All',...new Set(PRODUCTS.map(p=>p.category))];let cat='All';
-function card(p){const fin=p.finishes[0];return `<article class="card" id="${p.id}" data-id="${p.id}" data-fin="${fin}" data-img="0">
-<div class="main"><img src="${src(p,0)}" alt="${p.name}" loading="lazy"></div>
-<div class="thumbs">${p.images.length>1?p.images.map((_,i)=>`<img src="${src(p,i)}" alt="" data-i="${i}" class="${i?'':'on'}">`).join(''):''}</div>
-<h3>${p.name}</h3><div class="dims">${p.w} × ${p.d} × ${p.h} cm</div><div class="price">${fmt(p.price)}</div>
-<p>${p.material}</p><ul>${p.details.map(d=>`<li>${d}</li>`).join('')}</ul>
-<div class="fin">${p.finishes.map((f,i)=>`<button class="chip" aria-pressed="${!i}" data-f="${f}">${f}</button>`).join('')}</div>
-<a class="btn order" target="_blank" rel="noopener" href="${wa(`Hello Ghorfa, I'd like to order ${p.name} (${p.w}×${p.d} cm) in ${fin}.`)}">Order on WhatsApp</a></article>`}
 function shop(){$('#filters').innerHTML=cats.length>2?cats.map(c=>`<button class="chip" aria-pressed="${c===cat}" data-c="${c}">${c}</button>`).join(''):'';
- $('#grid').innerHTML=PRODUCTS.filter(p=>cat==='All'||p.category===cat).map(card).join('');
- document.querySelectorAll('.main img,.thumbs img').forEach(im=>{const c=im.closest('.card'),p=PRODUCTS.find(x=>x.id===c.dataset.id);im.onerror=()=>{im.onerror=null;im.src=ph(p)}})}
+ $('#grid').innerHTML=PRODUCTS.filter(p=>cat==='All'||p.category===cat).map(card).join('');fallback($('#grid'))}
 $('#filters').onclick=e=>{const b=e.target.closest('[data-c]');if(b){cat=b.dataset.c;shop()}};
-$('#grid').onclick=e=>{const c=e.target.closest('.card');if(!c)return;const p=PRODUCTS.find(x=>x.id===c.dataset.id);
- const t=e.target.closest('.thumbs img');if(t){c.querySelector('.main img').src=t.src;c.querySelectorAll('.thumbs img').forEach(x=>x.classList.toggle('on',x===t))}
- const f=e.target.closest('[data-f]');if(f){c.querySelectorAll('[data-f]').forEach(x=>x.setAttribute('aria-pressed',x===f));c.querySelector('.order').href=wa(`Hello Ghorfa, I'd like to order ${p.name} (${p.w}×${p.d} cm) in ${f.dataset.f}.`)}
- if(e.target.closest('.main')){$('#lb img').src=c.querySelector('.main img').src;$('#lb').showModal()}};
-$('#lb').onclick=()=>$('#lb').close();shop();
+hero();shop();
 </script></body></html>
